@@ -1,0 +1,8 @@
+node_modules/
+.cursor/
+mcp/
+
+server/.env
+server/logging-gpt.log
+*.log
+*.zip

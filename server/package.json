@@ -1,0 +1,30 @@
+{
+  "name": "gpt-live-server",
+  "version": "1.0.0",
+  "description": "Simple local server for GPT Live extension",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.mjs",
+    "start:personal": "powershell -ExecutionPolicy Bypass -File start-personal.ps1",
+    "start:automated": "powershell -ExecutionPolicy Bypass -File start-automated.ps1",
+    "start:cdp": "powershell -ExecutionPolicy Bypass -File start-cdp.ps1",
+    "start:cdp-chrome": "powershell -ExecutionPolicy Bypass -File start-cdp-chrome.ps1",
+    "start:playwright": "powershell -NoProfile -Command \"$env:BROWSER_BACKEND='playwright'; $env:USE_PLAYWRIGHT_CHROMIUM='1'; node server.mjs\"",
+    "test:extension": "node test-extension.mjs",
+    "start:debug-browser": "powershell -ExecutionPolicy Bypass -File start-debug-browser.ps1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^4.22.3",
+    "openai": "^7.15.0",
+    "playwright": "^1.63.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "selenium-webdriver": "^4.49.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Live Site Controller",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "offscreen",
+    "tabs",
+    "storage",
+    "debugger"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://localhost:3000/*",
+    "https://api.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
